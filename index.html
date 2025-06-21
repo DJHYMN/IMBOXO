@@ -1,79 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>IMBOXO - Creators</title>
-  <style>
-    body {
-      margin: 0;
-      background-color: #111;
-      color: #fff;
-      font-family: 'Helvetica Neue', sans-serif;
-      text-align: center;
-    }
-
-    h1 {
-      color: #f472d0;
-      margin-top: 40px;
-      font-size: 3rem;
-    }
-
-    .creator-row {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      padding: 40px 20px;
-    }
-
-    .avatar-box {
-      width: 180px;
-      height: 180px;
-      background: #0f0f0f;
-      border-radius: 20px;
-      box-shadow: 0 0 20px #00f0ff;
-      padding: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .avatar-box:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 30px #ff00ff;
-    }
-
-    .avatar-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 50%;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <title>IMBOXO Creators</title>
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-
-  <h1>IMBOXO</h1>
-
-  <div class="creator-row">
-    <div class="avatar-box">
-      <img src="Creator 1.png" alt="Creator 1" class="avatar-img" />
-    </div>
-    <div class="avatar-box">
-      <img src="Creator 2.png" alt="Creator 2" class="avatar-img" />
-    </div>
-    <div class="avatar-box">
-      <img src="Creator 3.png" alt="Creator 3" class="avatar-img" />
-    </div>
-    <div class="avatar-box">
-      <img src="Creator 4.png" alt="Creator 4" class="avatar-img" />
-    </div>
-    <div class="avatar-box">
-      <img src="Creator 5.png" alt="Creator 5" class="avatar-img" />
+  <div class="container">
+    <h1 class="title">IMBOXO</h1>
+    <h2 class="subtitle">Creators</h2>
+    <div class="grid">
+      <div class="card"><img src="images/Creator 1.png" alt="Creator 1" /></div>
+      <div class="card"><img src="images/Creator 2.png" alt="Creator 2" /></div>
+      <div class="card"><img src="images/Creator 3.png" alt="Creator 3" /></div>
+      <div class="card"><img src="images/Creator 4.png" alt="Creator 4" /></div>
+      <div class="card"><img src="images/Creator 5.png" alt="Creator 5" /></div>
     </div>
   </div>
-
 </body>
 </html>
