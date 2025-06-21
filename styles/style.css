@@ -1,66 +1,45 @@
+
 body {
-  background-color: #0a0a0a;
-  color: white;
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 20px;
+    background: radial-gradient(circle at top, #1f004d, #000);
+    font-family: Arial, sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
-
-h2 {
-  border-bottom: 1px solid #444;
-  padding-bottom: 10px;
-  margin-top: 40px;
+h1 {
+    margin-top: 2rem;
+    font-size: 2.5rem;
 }
-
-.section-grid {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 20px;
+.grid-container {
+    padding: 2rem;
 }
-
-.tile, .poster, .bot-thumb {
-  width: 160px;
-  height: 160px;
-  background-color: #1a1a1a;
-  border: 3px solid transparent;
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  transition: transform 0.35s ease, box-shadow 0.35s ease, border 0.35s ease;
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+    align-items: center;
 }
-
-.tile img, .poster img, .bot-thumb img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
-/* HOVER EFFECTS */
-a:hover .tile img,
-a:hover .poster img,
-a:hover .bot-thumb img {
-  box-shadow: 0 0 25px #8452ff, 0 0 10px #8452ff inset;
-  transform: scale(1.05);
+.card img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 4px solid #6400ff;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
-a:hover .tile,
-a:hover .poster,
-a:hover .bot-thumb {
-  transform: scale(1.05);
-  box-shadow: 0 0 25px #8452ff;
-  border-color: #8452ff;
+.card:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 20px #ff00ff99;
 }
-
-/* Static elements (not clickable) */
-.tile.static img,
-.poster.static img,
-.bot-thumb.static img {
-  opacity: 0.8;
-  box-shadow: none;
+.card:hover img {
+    border-color: #ff00ff;
+    box-shadow: 0 0 15px #ff00ff;
 }
