@@ -9,14 +9,14 @@ body {
 
 h1 {
   font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #e687f7;
+  margin-bottom: 10px;
+  color: #ff99ff;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin-bottom: 40px;
-  color: #e687f7;
+  color: #ff99ff;
 }
 
 .grid {
@@ -33,18 +33,19 @@ h2 {
   border-radius: 20px;
   overflow: hidden;
   background-color: transparent;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .avatar-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
   border-radius: 20px;
-  border: 2px solid #a64bf4;
 }
 
 .avatar-container:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px #a64bf4;
+  transform: scale(1.08);
+  box-shadow: 0 0 20px rgba(255, 153, 255, 0.6);
+  z-index: 10;
 }
