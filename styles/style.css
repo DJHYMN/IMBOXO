@@ -1,56 +1,66 @@
 body {
+  background-color: #0a0a0a;
+  color: white;
+  font-family: 'Arial', sans-serif;
   margin: 0;
-  padding: 0;
-  background-color: #0e0e0e;
-  font-family: 'Helvetica Neue', sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
+  padding: 20px;
+}
+
+h2 {
+  border-bottom: 1px solid #444;
+  padding-bottom: 10px;
+  margin-top: 40px;
 }
 
 .section-grid {
   display: flex;
-  gap: 24px;
+  gap: 20px;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 40px;
+  margin-top: 20px;
 }
 
-.tile {
+.tile, .poster, .bot-thumb {
   width: 160px;
   height: 160px;
   background-color: #1a1a1a;
-  border-radius: 25px;
-  overflow: hidden;
+  border: 3px solid transparent;
+  border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.4s ease;
-  border: 3px solid transparent;
-  box-shadow: 0 0 10px rgba(140, 0, 255, 0.3);
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border 0.35s ease;
 }
 
-.tile img {
-  width: 88%;
-  height: 88%;
+.tile img, .poster img, .bot-thumb img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   border-radius: 50%;
-  transition: all 0.4s ease;
-  box-shadow: 0 0 25px rgba(140, 0, 255, 0.3);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-.tile:hover {
-  transform: scale(1.07);
-  border-color: #8c00ff;
-  box-shadow: 0 0 25px rgba(140, 0, 255, 0.9);
+/* HOVER EFFECTS */
+a:hover .tile img,
+a:hover .poster img,
+a:hover .bot-thumb img {
+  box-shadow: 0 0 25px #8452ff, 0 0 10px #8452ff inset;
+  transform: scale(1.05);
 }
 
-.tile:hover img {
-  box-shadow: 0 0 35px rgba(140, 0, 255, 1);
+a:hover .tile,
+a:hover .poster,
+a:hover .bot-thumb {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #8452ff;
+  border-color: #8452ff;
 }
 
-.tile.static {
-  pointer-events: none;
-  opacity: 0.85;
+/* Static elements (not clickable) */
+.tile.static img,
+.poster.static img,
+.bot-thumb.static img {
+  opacity: 0.8;
+  box-shadow: none;
 }
